@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Login page</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    </head>
+    <body>
+        <header>
+        <nav class="navbar">
+            <ul>
+               <li><a href="{{url_for('welcome_page')}}">Back to page</a></li>
+            </ul>
+        </nav>
+        </header>
+        <section id="sss1">
+            <center><h1 class="two" ><span style="color:rgb(109, 30, 192);background-color: whitesmoke;margin-left: 30px;padding-left: 20px;padding-right: 20px;">indeed</span>.com</h1></center>
+        </section>
+        <br><br>
+    {% if error %}  
+        <p><strong style="color:red">Error</strong>: {{error}}</p>  
+    {% endif %} 
+    {% with messages = get_flashed_messages() %}  
+         {% if messages %}  
+               {% for message in messages %}  
+                    <p style="color:green">{{ message }}</p>  
+               {% endfor %}  
+         {% endif %}  
+      {% endwith %} 
+        <div class="container"> <br /><br />
+        <form action="/forget" method="POST">
+         <h1>Try to login with your 4 digit pin</h1> <br /><br />
+            <label class="form_label"for="email"><b>Username</b></label><br><br>
+            <input class="form_input"type="text" name= "username" /><br><br>
+            <label class="form_label"for="psw"><b>Pin</b></label><br><br>
+            <input class="form_input"type="password" name="pin"/>
+            </br></br></br>
+            <center><input type="submit" class="submitbtn"value="submit" /></center>
+        </form>
+        </div>
+        <center><p>Back to <a href="{{url_for('login')}}">login</a></p></center>
+    </body>
+</html>

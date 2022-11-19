@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>indeed.com</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="{{url_for('home')}}">Home</a></li>
+               <li><a href="{{url_for('register')}}">Register</a></li>
+               <li><a href="{{url_for('login')}}">Login</a></li> 
+            </ul>
+        </nav>
+    </header>
+    <section id="sss1">
+        <center><h1 class="two" ><span style="color:rgb(20, 20, 70) ;background-color: whitesmoke;margin-left: 30px;padding-left: 20px;padding-right: 20px;">indeed.com</span></h1></center>
+    </section>
+    <br><br>
+    <center><h1 class="h1lt">Contact us</h1></center>
+
+    <form>
+ 
+        <label class="form_label"><b>first name</b></label><br><br>
+        <input class="form_input" type="text" name="firstname" value="">
+ <br><br>
+ 
+ <label class="form_label"><b>last name</b></label><br><br>
+ <input class="form_input" type="text" name="lastname" value="">
+ 
+ <br><br>
+
+ <label class="form_label"><b>email</b></label><br><br>
+ <input class="form_input" type="text" name="email" value="">
+ <br>
+ <br>
+
+ <label class="form_label"><b>text area</b></label><br><br>
+ <textarea class="form_input" type="text" name="text area" value=""></textarea>
+ <br><br>
+ <center><input type="submit" class="submitbtn"value="submit" /></center>
+</form> 
+
+</body>
+</html>

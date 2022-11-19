@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKYS.com</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="{{url_for('home')}}">Home</a></li>
+               <li><a href="{{url_for('register')}}">Register</a></li>
+               <li><a href="{{url_for('login')}}">Login</a></li> 
+            </ul>
+        </nav>
+    </header>
+    <section id="sss1">
+        <center><h1 class="two" ><span style="color:rgb(20, 20, 70);background-color: whitesmoke;margin-left: 30px;padding-left: 20px;padding-right: 20px;">indeed.com</span></h1></center>
+    </section>
+    <br><br>
+    <section id="jobs">
+		
+		<center><h1><b>APPLY JOBS</b></h1></center><br>
+        <img style="position:absolute;top: 250px;border-radius: 20px;"src="{{url_for('static',filename='img/php.jpg')}}" alt=""width="370" height="200">
+        <img style="position:absolute;top: 550px;border-radius: 20px;"src="{{url_for('static',filename='img/python.png')}}" alt=""width="370" height="200">
+        <img style="position:absolute;top: 250px;left: 470px;border-radius: 20px;"src="{{url_for('static',filename='img/software.jpg')}}" alt=""width="370" height="200">
+        <img style="position:absolute;top: 550px;left: 470px;border-radius: 20px;"src="{{url_for('static',filename='img/java.jpg')}}" alt=""width="370" height="200">
+		<img style="position:absolute;top: 250px;left: 970px;border-radius: 20px;"src="{{url_for('static',filename='img/web.jpg')}}" alt=""width="370" height="200">
+        <img style="position:absolute;top: 550px;left: 970px;border-radius: 20px;"src="{{url_for('static',filename='img/sql.jpg')}}" alt=""width="370" height="200">			
+		<h2 style="position:absolute;top: 450px;left:150px"><a href="https://in.indeed.com/PHP-Developer-jobs?vjk=10cca9575b193c7d"><button>APPLY</button></a></h2>
+        <h2 style="position:absolute;top: 450px;left:650px"><a href="https://in.indeed.com/Software-Developer-jobs?vjk=b7da08f07cac87d5"><button>APPLY</button></a></h2>
+        <h2 style="position:absolute;top: 450px;left:1150px"><a href="https://in.indeed.com/Web-Developer-jobs?vjk=b81e49165da51eeb"><button>APPLY</button></a></h2>
+        <h2 style="position:absolute;top: 750px;left:1150px"><a href="https://in.indeed.com/SQL-Developer-jobs?vjk=ac86b15908022123"><button>APPLY</button></a></h2>
+        <h2 style="position:absolute;top: 750px;left:650px"><a href="https://in.indeed.com/Java-Developer-jobs?vjk=da306a665e00eb30"><button>APPLY</button></a></h2>
+        <h2 style="position:absolute;top: 750px;left:150px"><a href="https://in.indeed.com/Python-Developer-jobs?vjk=fa7b9bd250044569"><button>APPLY</button></a></h2>
+    </section>    
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>indeed.com</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <script>
+        window.watsonAssistantChatOptions = {
+            integrationID: "5bea080a-0793-42c5-97b8-3ede9c7b6a0c", // The ID of this integration.
+            region: "us-south", // The region your integration is hosted in.
+            serviceInstanceID: "ead2bc3a-7163-45a7-ae03-bd16c50d4ecc", // The ID of your service instance.
+            onLoad: function (instance) { instance.render(); }
+        };
+        setTimeout(function () {
+            const t = document.createElement('script');
+            t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+            document.head.appendChild(t);
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+               <li><a href="{{url_for('home')}}">Home</a></li>
+               <li><a href="{{url_for('register')}}">Register</a></li>
+               <li><a href="{{url_for('login')}}">Login</a></li> 
+               <li><a href="{{url_for('welcome_page')}}">Apply Job</a></li> 
+               <li><a href="{{url_for('skills')}}">Skills</a></li> 
+               <li><a href="{{url_for('about')}}">About us</a></li>
+               <li><a href="{{url_for('contact')}}">contact us</a></li> 
+            </ul>
+        </nav>
+    </header>
+    <section id="sss1">
+        <h1 class="two" ><span style="color:rgb(20, 20, 70);background-color: whitesmoke;margin-left: 30px;padding-left: 20px;padding-right: 20px;">indeed.com</span></h1>
+        <div id="ss1">
+            <input class="input_search" type="text" placeholder="Search Jobs" >
+            <button class="button_search">Search</button>
+        </div>
+        <center><img src="{{url_for('static',filename='img/bg.png')}}"alt="job" height="auto" width="auto"></center>
+        </section>
+
+    
+    
+</body>
+</html>

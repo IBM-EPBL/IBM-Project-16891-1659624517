@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Registration page</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    </head>
+    <body>
+        <header>
+        <nav class="navbar">
+            <ul>
+               <li><a href="{{url_for('home')}}">Back to page</a></li>
+            </ul>
+        </nav>
+    </header>
+        <section id="sss1">
+            <center><h1 class="two" ><span style="color:rgb(20, 20, 70);background-color:white;margin-left: 30px;padding-left: 20px;padding-right: 20px;">indeed.com</span></h1></center>
+        </section>
+        <div class="container">
+        <form action="/register" method="POST">
+            <h2>Registration</h2>
+            <label class="form_label"for="email"><b>Email ID</b></label><br><br>
+            <input class="form_input" type="email" name="email"/><br><br>
+            <label class="form_label"for="user"><b>Username</b></label><br><br>
+            <input class="form_input"type="text" name= "username" /><br><br>
+            <label class="form_label"for="psw"><b>Password</b></label><br><br>
+            <input class="form_input"type="password" name="password"/><br><br>
+            <label class="form_label"for="pho"><b> Enter Phone number:</b></label><br><br>
+            <input class="form_input"type="text" name="phonenumber"/><br><br>
+            <label class="form_label"for="pho"><b> Enter four digit pin:</b></label><br><br>
+            <input class="form_input"type="password" name="pin"/>
+            </br></br></br>
+           <center> {% if error %}  
+        <p><strong style="color:red">Error</strong>: {{error}}</p>  
+    {% endif %} 
+    {% with messages = get_flashed_messages() %}  
+         {% if messages %}  
+               {% for message in messages %}  
+                    <p style="color:green">{{ message }}</p>  
+               {% endfor %}  
+         {% endif %}  
+      {% endwith %} </center>
+            <center><input type="submit" class="submitbtn"value="submit" /></center>
+            <center><p>Already have a account <a href="{{url_for('login')}}">Sign in</a></p></center>
+        </form>
+        </div>
+    </body>
+</html>
