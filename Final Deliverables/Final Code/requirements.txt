@@ -1,0 +1,6 @@
+flask
+ibm_db
+sendgrid
+requests
+
+
